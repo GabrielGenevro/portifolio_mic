@@ -10,10 +10,11 @@
 
 void GPIO_initialize()
 	{
-		DDRB = (1<<DDB0); //configura o pino PB0 como saída
+		DDRB = (1<<DDB0); //configura o pino PB0 como saï¿½da
 	}
 
 void GPIO_blinked()
 	{
-		PORTB = (1<< PORTB0); //aciona o pino PB0
+		PORTB |= (1<< PORTB0); //aciona o pino PB0
+		PORTB &= ~(1<< PORTB0); //desaciona o pino PB0
 	}
