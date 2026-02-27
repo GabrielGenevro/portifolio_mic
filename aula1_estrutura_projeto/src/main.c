@@ -11,6 +11,7 @@
 
 int main(void)
 {
+    //inicialização dos periféricos
 	GPIO_initialize();
 	USART_initialize();
     while(1)
