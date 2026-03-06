@@ -7,14 +7,14 @@
 #define F_CPU 16000000
 #include <xc.h>
 #include "util/delay.h"
-/* O que este c?digo faz:
-	* Pisca um led ligado ao pino PC2 enquanto a chave
-	* ligada ao pino PD3 estiver pressionada
-*/
  
 /*
  #define BIT3MASK 0b00001000 // ou BIT3MASK (1<<3) 
  //foi substituido por (1<<PORTD3) na linha 26
+*/
+/**
+*	@brief Pisca um led ligado ao pino PC2 enquanto a chave
+*	ligada ao pino PD3 estiver pressionado
 */
 
 int main(void)
