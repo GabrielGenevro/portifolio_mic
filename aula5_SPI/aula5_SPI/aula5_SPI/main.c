@@ -12,7 +12,7 @@
 #define SPI_BUFFER_SIZE 4
 #define F_CPU 16000000
 
-uint8_t gReceiveBuffer[SPI_BUFFER_SIZE];
+uint8_t gReceiveBuffer[SPI_BUFFER_SIZE] = (1,2,3,4);
 uint8_t gTransmitBuffer[SPI_BUFFER_SIZE];
 
 int main(void)
