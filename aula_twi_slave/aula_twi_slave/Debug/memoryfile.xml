@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="aula_twi_master.elf">                 
+  <executable name="aula_twi_slave.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>32768</length>                 
-      <used>282</used>                     
-      <free>32486</free>                     
+      <used>274</used>                     
+      <free>32494</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 
