@@ -23,7 +23,7 @@ void TWI_master_write_byte(uint8_t pAddress, uint8_t pData)
 		TWCR |= (1<<TWINT)|(1<<TWSTA)|(1<<TWEN); //Enviar condição de start
 		while((TWCR &(1<<TWINT)) == 0); //Esperar conclusão
 		TWDR = (pAddress<<1) | 0; //1 para leitura 0 para escrita
-		TWCR = (1<<TWINT)|(1<<TWEN); //limpar twint para pr�ximo passo
+		TWCR = (1<<TWINT)|(1<<TWEN); //limpar twint para pr�ximo passo
 		while((TWCR &(1<<TWINT)) == 0); //Esperar conclusão
 		uint8_t tState = TWSR & 0b11111000;
 		switch(tState)
@@ -41,7 +41,7 @@ int main(void)
 	_delay_ms(1000);
     while(1)
     {
-		TWI_master_config(0x55, 'a');
+		TWI_master_write_byte(0x55, 'a');
 		_delay_ms(1000);
     }
 	
